@@ -1,10 +1,10 @@
-# Contributing to NewsNow
+# Contributing to 即刻News
 
-Thank you for considering contributing to NewsNow! This document provides guidelines and instructions for contributing to the project.
+Thank you for considering contributing to 即刻News! This document provides guidelines and instructions for contributing to the project.
 
 ## Adding a New Source
 
-NewsNow is built to be easily extensible with new sources. Here's a step-by-step guide on how to add a new source:
+即刻News is built to be easily extensible with new sources. Here's a step-by-step guide on how to add a new source:
 
 ### 1. Create a Feature Branch
 
@@ -35,13 +35,13 @@ Add your new source to the source configuration in `/shared/pre-sources.ts`:
       column: "china",
       type: "hottest"
     },
-    "hot-video": {  // Add your new sub-source here
+    "hot-video": {
       title: "热门视频",
       column: "china",
       type: "hottest"
     }
   }
-};
+}
 ```
 
 For a completely new source, add a new top-level entry:
@@ -51,9 +51,9 @@ For a completely new source, add a new top-level entry:
   name: "New Source",
   color: "blue",
   home: "https://www.example.com",
-  column: "tech", // Pick an appropriate column
-  type: "hottest" // Or "realtime" if it's a news feed
-};
+  column: "tech",
+  type: "hottest"
+}
 ```
 
 ### 3. Implement the Source Fetcher

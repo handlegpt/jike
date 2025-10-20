@@ -10,7 +10,7 @@ export function Column({ id }: { id: FixedColumnID }) {
     setCurrentColumnID(id)
   }, [id, setCurrentColumnID])
 
-  useTitle(`NewsNow | ${metadata[id].name}`)
+  useTitle(`即刻News | ${metadata[id].name}`)
 
   return (
     <>
