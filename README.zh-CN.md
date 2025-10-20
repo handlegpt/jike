@@ -25,7 +25,7 @@
         "newsnow-mcp-server"
       ],
       "env": {
-        "BASE_URL": "https://newsnow.busiyi.world"
+        "BASE_URL": "https://jike.news"
       }
     }
   }
