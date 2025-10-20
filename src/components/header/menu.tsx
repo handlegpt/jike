@@ -1,4 +1,6 @@
 import { motion } from "framer-motion"
+import { useState } from "react"
+import { useLogin } from "~/hooks/useLogin"
 
 // function ThemeToggle() {
 //   const { isDark, toggleDark } = useDark()
@@ -16,7 +18,7 @@ export function Menu() {
   const { loggedIn, login, logout, userInfo, enableLogin } = useLogin()
   const [shown, show] = useState(false)
   return (
-    <span className="relative" onMouseEnter={() => show(true)} onMouseLeave={() => show(false)}>
+    <span className="relative" onMouseEnter={() => show(true)} onMouseLeave={() => show(false)} onClick={() => show(!shown)}>
       <span className="flex items-center scale-90">
         {
           enableLogin && loggedIn && userInfo.avatar
@@ -65,28 +67,6 @@ export function Menu() {
                     </li>
                   ))}
               {/* <ThemeToggle /> */}
-              <li onClick={() => window.open(Homepage)} className="cursor-pointer [&_*]:cursor-pointer transition-all">
-                <span className="i-ph:github-logo-duotone inline-block" />
-                <span>Star on Github </span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <a
-                  href="https://github.com/ourongxing/newsnow"
-                >
-                  <img
-                    alt="GitHub stars badge"
-                    src="https://img.shields.io/github/stars/ourongxing/newsnow?logo=github&style=flat&labelColor=%235e3c40&color=%23614447"
-                  />
-                </a>
-                <a
-                  href="https://github.com/ourongxing/newsnow/fork"
-                >
-                  <img
-                    alt="GitHub forks badge"
-                    src="https://img.shields.io/github/forks/ourongxing/newsnow?logo=github&style=flat&labelColor=%235e3c40&color=%23614447"
-                  />
-                </a>
-              </li>
             </ol>
           </motion.div>
         </div>
