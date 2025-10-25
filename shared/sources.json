@@ -319,6 +319,7 @@
     "name": "Product Hunt",
     "type": "hottest",
     "column": "tech",
+    "disable": true,
     "home": "https://www.producthunt.com/",
     "color": "red",
     "interval": 600000
