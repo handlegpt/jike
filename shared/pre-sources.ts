@@ -414,6 +414,23 @@ export const originSources = {
       },
     },
   },
+  "nytimes-cn": {
+    name: "纽约时报中文网",
+    color: "gray",
+    column: "world",
+    home: "https://cn.nytimes.com",
+    interval: Time.Common,
+    type: "realtime",
+  },
+  "nhk-zh": {
+    name: "NHK World 中文",
+    color: "blue",
+    column: "world",
+    home: "https://www3.nhk.or.jp/nhkworld/zh/news/",
+    interval: Time.Common,
+    type: "realtime",
+    disable: true,
+  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {

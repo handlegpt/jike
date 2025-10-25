@@ -462,5 +462,13 @@
     "color": "green",
     "interval": 1800000,
     "title": "最热"
+  },
+  "nytimes-cn": {
+    "name": "纽约时报中文网",
+    "type": "realtime",
+    "column": "world",
+    "home": "https://cn.nytimes.com",
+    "color": "gray",
+    "interval": 1800000
   }
 }
