@@ -422,15 +422,6 @@ export const originSources = {
     interval: Time.Common,
     type: "realtime",
   },
-  "nhk-zh": {
-    name: "NHK World 中文",
-    color: "blue",
-    column: "world",
-    home: "https://www3.nhk.or.jp/nhkworld/zh/news/",
-    interval: Time.Common,
-    type: "realtime",
-    disable: true,
-  },
 } as const satisfies Record<string, OriginSource>
 
 export function genSources() {
