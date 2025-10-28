@@ -261,7 +261,6 @@ export const originSources = {
     color: "red",
     column: "tech",
     type: "hottest",
-    disable: true,
     home: "https://www.producthunt.com/",
   },
   "github": {
