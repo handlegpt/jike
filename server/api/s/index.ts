@@ -8,9 +8,16 @@ export default defineEventHandler(async (event): Promise<SourceResponse> => {
     const query = getQuery(event)
     const latest = query.latest !== undefined && query.latest !== "false"
     let id = query.id as SourceID
-    const isValid = (id: SourceID) => !id || !sources[id] || !getters[id]
+    const isValid = (id: SourceID) => id && sources[id] && getters[id]
 
-    if (isValid(id)) {
+    // 调试信息
+    console.log("Source ID:", id)
+    console.log("Sources available:", Object.keys(sources))
+    console.log("Getters available:", Object.keys(getters))
+    console.log("Source exists:", !!sources[id])
+    console.log("Getter exists:", !!getters[id])
+
+    if (!isValid(id)) {
       const redirectID = sources?.[id]?.redirect
       if (redirectID) id = redirectID
       if (isValid(id)) throw new Error("Invalid source id")
