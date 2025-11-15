@@ -41,7 +41,7 @@ export const originSources = {
     home: "https://weibo.com",
   },
   "zaobao": {
-    name: "联合早报",
+    name: "联合早报（国内版）",
     interval: Time.Common,
     type: "realtime",
     column: "world",
