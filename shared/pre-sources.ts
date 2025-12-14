@@ -103,6 +103,10 @@ export const originSources = {
       quick: {
         title: "快讯",
       },
+      renqi: {
+        type: "hottest",
+        title: "人气榜",
+      },
     },
   },
   "douyin": {
@@ -450,6 +454,14 @@ export const originSources = {
         home: "https://news.qq.com/tag/aEWqxLtdgmQ=",
       },
     },
+  },
+  "freebuf": {
+    name: "Freebuf",
+    column: "china",
+    title: "网络安全",
+    color: "green",
+    type: "hottest",
+    home: "https://www.freebuf.com/",
   },
 } as const satisfies Record<string, OriginSource>
 
